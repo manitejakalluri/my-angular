@@ -1,0 +1,19 @@
+<!-- <p>calcultor works!</p>
+
+<h1>calcultor</h1>
+<h5>[(sum)]</h5>
+<input type="number" [(ngModel)]="num1" placeholder="enter number">
+<input type="number" [(ngModel)]="num2" placeholder="enter number">
+<button (click)="addition()" [disabled]="">add</button> -->
+<div class="databinding">
+   <h1>Calculator</h1>
+   <h5>{{result}}</h5>
+   <label> Number 1 : </label><br>
+   <input type="number" [(ngModel)]="num1" placeholder="enter number 1" ><br>
+   <label> Number 2 : </label><br>
+   <input type="number" [(ngModel)]="num2" placeholder="enter number 2"><br><br>
+   <button (click)="addition()" [disabled]="!num1 || !num2">Add</button>
+   <button (click)="subtraction()" [disabled]="!num1 || !num2">Sub</button>
+   <button (click)="multiplication()" [disabled]="!num1 || !num2">Mul</button>
+   <button (click)="division()" [disabled]="!num1 || !num2">Div</button>
+   </div>

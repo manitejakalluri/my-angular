@@ -1,0 +1,11 @@
+<!-- <p>rectangle works!</p> -->
+ <div class="rectangle">
+   <h1>Rectangle</h1><br>
+   <label> <b>Length :</b> </label><br>
+   <input type="number" [(ngModel)]="length" placeholder="enter number 1" ><br>
+   <label> <b>Breadth :</b> </label><br>
+   <input type="number" [(ngModel)]="breadth" placeholder="enter number 2"><br><br>
+   <button (click)="area()" >Area</button>
+   <button (click)="perimeter()" >Perimeter</button><br>
+    <h5>{{result}}</h5>
+   </div>

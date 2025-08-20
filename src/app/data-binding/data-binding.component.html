@@ -1,0 +1,26 @@
+<p>data-binding</p>
+<!-- event binding -->
+ <button (click)="greetings()">click me</button> <br>
+
+ <input type="text" placeholder="enter name"(keyup)="typing()"> <br>
+
+
+<select (change)="fruits()">
+    <option>apple</option>
+    <option>mango</option>
+    <option>banana</option>
+    <option>kiwi</option>
+    <option>cherry</option>
+    <option>pineapple</option>
+</select><br>
+
+<!-- property binding -->
+ <button [disabled]="isdatapresent">reset</button><br>
+ <img [src]="image_url" alt=""><br>
+
+ <!-- interpolation -->
+  <h2>{{name}}</h2>
+  <h3>{{age}}</h3>
+
+  <!-- two way data binding -->
+   <input type="text"[(ngModel)]="mobile"(keyup)="mobile">

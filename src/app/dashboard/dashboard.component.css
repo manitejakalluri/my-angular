@@ -1,0 +1,17 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+}
+.left{
+    width: 20%;
+    height: 100%;
+    background-color: lightskyblue;
+    /* justify-items: center; */
+}
+.right{
+    width: 80%;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
+}
