@@ -14,6 +14,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductsComponent } from './products/products.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
 
 const routes: Routes = [
 
@@ -30,6 +31,7 @@ const routes: Routes = [
     {path:'directives',component:DirectivesComponent},
     {path:'employee',component:EmployeeComponent},
     {path:'products',component:ProductsComponent},
+    {path:'vehicles',component:VehiclesComponent},
   ]},//parent routing
 
   {path:'',component:ErrorComponent}, //wild card /error routing
