@@ -1,0 +1,14 @@
+<!-- <p>mail works!</p> -->
+
+      <!-- <p *ngFor="let mail of mails">
+        {{mail.id}}
+        {{mail.title}}
+      </p>   -->
+<div *ngFor="let mail of mails" 
+    [ngStyle]="{'color':mail.completed>= true ? 'black':'lightblue'}">{{ mail.id }} {{mail.title}}
+</div>
+<!-- <ol>
+<li *ngFor="let mail of mails" 
+    [ngStyle]="{'color':mail.completed>= true ? 'black':'lightblue'}">{{mail.title}}
+</li>
+</ol> -->

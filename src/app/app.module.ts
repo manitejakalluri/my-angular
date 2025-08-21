@@ -20,6 +20,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { HttpClientModule } from '@angular/common/http';
     DirectivesComponent,
     EmployeeComponent,
     ProductsComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    FlipkartComponent,
+    MailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<!-- <p>flipkart works!</p>/ -->
+ <div class="parent">
+    <div class="card" *ngFor="let flipkart of flipkarts">
+        <p><img src="{{flipkart.image}}" alt=""></p>
+        <h4>{{flipkart.category}}</h4>
+        <h4 style="color: steelblue;">{{flipkart.title}}</h4>
+        <h6 style="color: red;">RS{{flipkart.price}}</h6>
+        <!-- <h6>{{flipkart.rate}}</h6> -->
+        <!-- <h6>{{flipkart.id}}</h6> -->
+         <div class="rating">{{flipkart.rating.rate}}</div>
+    </div>
+ </div>

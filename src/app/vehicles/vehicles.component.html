@@ -1,4 +1,35 @@
 <!-- <p>vehicles works!</p> -->
+
+<input type="text" [(ngModel)]="searchkeyword" (keyup)="search()">
+<select [(ngModel)]="coloumname">
+    <option value="vehicle">Vehicle Name</option>
+    <option value="manufacturer">Manufacture</option>
+    <option value="color">Color</option>
+    <option value="cost">Cost</option>
+</select>
+<select [(ngModel)]="sortorder">
+    <option value="asc">asscending order</option>
+    <option value="desc">decending order</option>
+</select>
+<button class="btn btn-warning" (click)="sort()">sort</button>
+
+<!-- pagination -->
+ <select [(ngModel)]="items">
+    <option value="5">5</option>
+    <option value="10">10</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+ </select>
+
+ <select [(ngModel)]="pagenumber">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+ </select>
+ <button class="btn btn-success" (click)="pagination()">pagination</button>
+
+
  <table class="table table-dark">
     <thead>
         <tr>
@@ -9,6 +40,7 @@
             <th>Type</th>
             <th>Fuel</th>
             <th>Image</th>
+            <th>action</th>
         </tr>
     </thead>
     <tbody>
@@ -19,7 +51,10 @@
             <td>{{vehicle.cost}}</td>
             <td>{{vehicle.type}}</td>
             <td>{{vehicle.fuel}}</td>
-            <td><img src="{{vehicle.image}}" alt=""></td>
+            <td><img src="{{vehicle.image}}" alt="" height="100px" width="150px"></td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(vehicle.id)">delete</button>
+            </td>
         </tr>
     </tbody>
  </table>

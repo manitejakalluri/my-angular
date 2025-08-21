@@ -15,13 +15,15 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
+import { MailComponent } from './mail/mail.component';
 
 const routes: Routes = [
 
   {path:'',component:LoginComponent},//default routing
   {path:'dashboard',component:DashboardComponent,children:[
     {path:'home',component:HomeComponent},
-    // {path:'gallery',component:GalleryComponent},
+    {path:'gallery',component:GalleryComponent},
     {path:'welcome',component:WelcomComponent},
     {path:'data-binding',component:DataBindingComponent},
     {path:'calcultor',component:CalcultorComponent},
@@ -32,6 +34,8 @@ const routes: Routes = [
     {path:'employee',component:EmployeeComponent},
     {path:'products',component:ProductsComponent},
     {path:'vehicles',component:VehiclesComponent},
+    {path:'flipkarts',component:FlipkartComponent},
+    {path:'mails',component:MailComponent},
   ]},//parent routing
 
   {path:'',component:ErrorComponent}, //wild card /error routing
