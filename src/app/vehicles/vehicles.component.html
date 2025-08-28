@@ -40,7 +40,7 @@
             <th>Type</th>
             <th>Fuel</th>
             <th>Image</th>
-            <th>action</th>
+            <th callspan="3">action</th>
         </tr>
     </thead>
     <tbody>
@@ -54,6 +54,12 @@
             <td><img src="{{vehicle.image}}" alt="" height="100px" width="150px"></td>
             <td>
                 <button class="btn btn-danger" (click)="delete(vehicle.id)">delete</button>
+            </td>
+            <td>
+                <button class="btn btn-primary" routerLink="/dashboard/vehicle-details/{{vehicle.id}}">view</button>
+            </td>
+            <td>
+                <button class="btn btn-warning" routerLink="/dashboard/edit-vehicle/{{vehicle.id}}">edit</button>
             </td>
         </tr>
     </tbody>

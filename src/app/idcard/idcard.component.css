@@ -1,0 +1,54 @@
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    overflow: auto;
+}
+.card{
+    height: 500px;
+    width: 300px;
+    background-color: sienna;
+}
+.schoolname{
+    height: 38px;
+    width: 100%;
+    /* background-color: azure; */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.img1{
+    height: 80px;
+    width: 80px;
+    align-items: baseline;
+}
+.img2{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 70px;
+    margin-top: 50px;
+}
+.logo{
+    background-image: linear-gradient(school_logo);
+}
+.det{
+    background-color: chocolate;
+    padding-left: 50px;
+    overflow: hidden;
+    height: 400px;
+}
+.b1{
+      background: #1496e0; 
+      color: white;
+      opacity: 0;
+      cursor: pointer;
+}
+.card:hover .b1{
+      opacity: 1;
+}

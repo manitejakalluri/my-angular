@@ -9,8 +9,8 @@ import { VehiclesService } from '../vehicles.service';
 })
 export class FlipkartComponent {
   flipkarts:any[]=[];
-  VehiclesService: any;
-  vehicles: any;
+  flipcartService: any;
+  flipcart: any;
   constructor(private _flipkartservice:FlipkartService){
   _flipkartservice.getflipkart().subscribe(
     (data:any)=>{

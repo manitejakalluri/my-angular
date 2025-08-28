@@ -17,6 +17,15 @@ import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+import { IdcardComponent } from './idcard/idcard.component';
+import { NewidcardComponent } from './newidcard/newidcard.component';
+import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
+import { CreateuserComponent } from './createuser/createuser.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
 
 const routes: Routes = [
 
@@ -36,6 +45,17 @@ const routes: Routes = [
     {path:'vehicles',component:VehiclesComponent},
     {path:'flipkarts',component:FlipkartComponent},
     {path:'mails',component:MailComponent},
+    {path:'pinterest',component:PinterestComponent},
+    {path:'weather',component:WeatherComponent},
+    {path:'createvehile',component:CreatevehicleComponent},
+    {path:'idcard',component:IdcardComponent},
+    {path:'newidcard',component:NewidcardComponent},
+    {path:'accountdetails',component:AccountdetailsComponent},
+    {path:'createuser',component:CreateuserComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreatevehicleComponent},
+    {path:'idcard-details/:id',component:IdcardDetailsComponent},
+    {path:'edit-idcard/:id',component:NewidcardComponent},
   ]},//parent routing
 
   {path:'',component:ErrorComponent}, //wild card /error routing

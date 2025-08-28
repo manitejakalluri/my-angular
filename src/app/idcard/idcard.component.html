@@ -1,0 +1,59 @@
+<!-- <p>idcard works!</p> -->
+
+
+
+<input type="text" placeholder="enter here" [(ngModel)]="searchkeyword" (keyup)="search()">
+
+<!-- sorting  -->
+ <select [(ngModel)]="columnName">
+    <option value="name"> name</option>
+     <option value="dob"> dob</option>
+      <option value="city">city</option>
+       <option value="email">email</option>
+</select>
+
+<select [(ngModel)]="sortorder">
+    <option value="asc">ascending order</option>
+     <option value="desc"> descending order</option>
+
+</select>
+
+<button class="btn btn-warning" (click)="sort()">sort</button>
+
+
+<!-- pagination -->
+ <select [(ngModel)]="items">
+    <option value="4">4</option>
+    <option value="8">8</option>
+    <option value="12">12</option>
+ </select>
+
+ <select [(ngModel)]="pagenumber">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+ </select>
+ <button class="btn btn-success" (click)="pagination()">pagination</button>
+ 
+<div class="parent">
+    <div class="card" *ngFor="let card of Cards">
+        <div class="schoolname">
+            <h4 class="logo"><img class="img1" src="{{card.school_logo}}" alt=""></h4>
+            <h6>{{card.school_name}}</h6>
+        </div>
+        <h6><img class="img2" src="{{card.profile_picture}}" alt=""></h6>
+        <div class="det">
+        <h6>name:{{card.name}}</h6>
+        <h6>phone:{{card.phone}}</h6>
+        <h6>city:{{card.city}}</h6>
+        <h6>dob:{{card.dob}}</h6>
+        <!-- <h6>email:{{idcard.email}}</h6> -->
+        <h6>city:{{card.school_city}}</h6>
+        <!-- <h6>pin:{{idcard.school_pin}}</h6> -->
+        <!-- <h6>id:{{idcard.id}}</h6> -->
+        </div>
+        <button class="b1" class="btn btn-primary" routerLink="/dashboard/idcard-details/{{card.id}}">view</button>
+        <button class="b1" class="btn btn-warning" routerLink="/dashboard/edit-idcard/{{card.id}}">edit</button>
+        <button class="b1" class="btn btn-danger" (click)="delete(card.id)">delete</button>
+    </div>
+</div>

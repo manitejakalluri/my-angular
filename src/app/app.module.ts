@@ -14,7 +14,7 @@ import { CalcultorComponent } from './calcultor/calcultor.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BmiComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductsComponent } from './products/products.component';
@@ -22,6 +22,15 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
+import { PinterestComponent } from './pinterest/pinterest.component';
+import { WeatherComponent } from './weather/weather.component';
+import { CreatevehicleComponent } from './createvehicle/createvehicle.component';
+import { IdcardComponent } from './idcard/idcard.component';
+import { NewidcardComponent } from './newidcard/newidcard.component';
+import { AccountdetailsComponent } from './accountdetails/accountdetails.component';
+import { CreateuserComponent } from './createuser/createuser.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
 
 @NgModule({
   declarations: [
@@ -42,13 +51,23 @@ import { MailComponent } from './mail/mail.component';
     ProductsComponent,
     VehiclesComponent,
     FlipkartComponent,
-    MailComponent
+    MailComponent,
+    PinterestComponent,
+    WeatherComponent,
+    CreatevehicleComponent,
+    IdcardComponent,
+    NewidcardComponent,
+    AccountdetailsComponent,
+    CreateuserComponent,
+    VehicleDetailsComponent,
+    IdcardDetailsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,7 +8,8 @@
     width: 20%;
     height: 100%;
     background-color: lightskyblue;
-    /* justify-items: center; */
+    overflow: auto;
+    font-family: 'Times New Roman', Times, serif;
 }
 .right{
     width: 80%;

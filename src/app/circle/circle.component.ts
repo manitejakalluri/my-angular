@@ -15,7 +15,7 @@ export class CircleComponent {
     this.result=Math.PI * this.radius * this.radius
   }
 
-    perimeter(){
+  perimeter(){
       this.result=2 * Math.PI * this.radius
   }
 }

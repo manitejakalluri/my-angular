@@ -1,0 +1,27 @@
+<!-- <p>createvehicle works!</p> -->
+<!-- <h1 *ngIf="!id">create vehicle</h1>
+<h1 *ngIf="!id">edit vehicle</h1> -->
+<h1>{{id ? 'edit vehicle':'create vehicle'}}</h1>
+
+<form [formGroup]="vehicleform">
+    <label>vehile name:</label>
+    <input type="text" formControlName="vehicle"><br>
+    <label>vehile manufacturer:</label>
+    <input type="text" formControlName="manufacturer"><br>
+    <label>vehile model:</label>
+    <input type="text" formControlName="model"><br>
+    <label>vehile type:</label>
+    <input type="text" formControlName="type"><br>
+    <label>vehile fule:</label>
+    <input type="text" formControlName="fule"> <br>
+    <label>vehile color:</label>
+    <input type="text" formControlName="color"><br>
+    <label>vehile image:</label>
+    <input type="text" formControlName="image"><br>
+    <label>vehile cost:</label>
+    <input type="text" formControlName="cost"><br>
+    <label>vehile tyres:</label>
+    <input type="text" formControlName="tyres"><br>
+
+    <button class="btn btn-warning" (click)="submit()">submit</button>
+</form>

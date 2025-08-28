@@ -1,0 +1,37 @@
+<!-- <p>weather works!</p> -->
+<!-- <div class="parent">
+    <div class="card">
+        <h4>weather in hyderabad</h4>
+        <div class="sun"></div>
+    </div>
+</div> -->
+
+<!-- <div class="parent">
+  <div class="card">
+    <h4>Weather in Hyderabad</h4>
+    
+    <div 
+      class="sun" 
+      [ngStyle]="{ 'background-color': getDotColor(weather.temperature) }">
+    </div>
+
+    <p>Temperature: {{ weather.temperature }}°C</p>
+
+    <p>{{ weather.time | date:'medium':'UTC+5:30' }}</p>
+
+    <p>{{ weather.is_day === 1 ? 'Daytime ' : 'Nighttime ' }}</p>
+  </div>
+</div> -->
+
+<div class="card">
+  <h4>Weather in Hyderabad</h4>
+
+  <div 
+    class="sun" 
+    [ngStyle]="{ 'background-color': getDotColor(weather.temperature) }">
+  </div>
+
+  <p>{{ weather.temperature }}°C</p>
+  <p>{{ weather.time | date:'short':'UTC+5:30' }}</p>
+  <p>{{ weather.is_day === 1 ? 'Daytime' : 'Nighttime' }}</p>
+</div>
