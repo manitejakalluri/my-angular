@@ -26,11 +26,14 @@ import { AccountdetailsComponent } from './accountdetails/accountdetails.compone
 import { CreateuserComponent } from './createuser/createuser.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
 
   {path:'',component:LoginComponent},//default routing
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard],children:[
     {path:'home',component:HomeComponent},
     {path:'gallery',component:GalleryComponent},
     {path:'welcome',component:WelcomComponent},
@@ -56,6 +59,14 @@ const routes: Routes = [
     {path:'edit-vehicle/:id',component:CreatevehicleComponent},
     {path:'idcard-details/:id',component:IdcardDetailsComponent},
     {path:'edit-idcard/:id',component:NewidcardComponent},
+    {path:'login',component:LoginComponent},
+    {path:'sibling',component:Sibling1Component},
+    {path:'parent',component:ParentComponent},
+
+    // {path:'payment',
+    //   loadChildren: () => import ('./payments/payments.module')
+    //   .then (m => m.PaymentsModule)
+    // }
   ]},//parent routing
 
   {path:'',component:ErrorComponent}, //wild card /error routing

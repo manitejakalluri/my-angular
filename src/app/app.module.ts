@@ -31,6 +31,17 @@ import { AccountdetailsComponent } from './accountdetails/accountdetails.compone
 import { CreateuserComponent } from './createuser/createuser.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { IdcardDetailsComponent } from './idcard-details/idcard-details.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
+import { AboutCeoComponent } from './about-ceo/about-ceo.component';
+import { AboutCompanyComponent } from './about-company/about-company.component';
+import { AboutUsModule } from './about-us/about-us.module';
+import { UpiComponent } from './upi/upi.component';
+import { CardComponent } from './card/card.component';
+import { CodComponent } from './cod/cod.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +72,16 @@ import { IdcardDetailsComponent } from './idcard-details/idcard-details.componen
     CreateuserComponent,
     VehicleDetailsComponent,
     IdcardDetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
+    AboutCeoComponent,
+    AboutCompanyComponent,
+    UpiComponent,
+    CardComponent,
+    CodComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +89,7 @@ import { IdcardDetailsComponent } from './idcard-details/idcard-details.componen
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AboutUsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

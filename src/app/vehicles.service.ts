@@ -7,36 +7,38 @@ import { Observable } from 'rxjs';
 })
 export class VehiclesService {
 
+  apiurl:string='https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction';
+
   constructor(private _httpclient:HttpClient) { }
   getvehicles():Observable<any>{
-    return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction');
+    return this._httpclient.get(this.apiurl);
   }
 
   getvehicle(id:any):Observable<any>{
-    return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/'+id);
+    return this._httpclient.get(this.apiurl+'/'+id);
   }
 
    getfilteredvehicles(term:any):Observable<any>{
-    return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter='+term);
+    return this._httpclient.get(this.apiurl+'?filter='+term);
   }
 
   getsortedvehicles(coloum:any,order:any):Observable<any>{
-    return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy='+coloum+"&order="+order);
+    return this._httpclient.get(this.apiurl+'?sortBy='+coloum+"&order="+order);
   }
 
    getpagitedvehicles(limit:any,page:any):Observable<any>{
-    return this._httpclient.get('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?limit='+limit+"&page="+page);
+    return this._httpclient.get(this.apiurl+'?limit='+limit+"&page="+page);
   }
 
   deletevehicles(id:any):Observable<any>{
-    return this._httpclient.delete('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/'+id);
+    return this._httpclient.delete(this.apiurl+'/'+id);
   }
 
   createvehicle(data:any):Observable<any>{
-    return this._httpclient.post('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction',data);
+    return this._httpclient.post(this.apiurl,data);
   }
 
   updatevehicle(id:any,data:any):Observable<any>{
-    return this._httpclient.put('https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/'+id,data);
+    return this._httpclient.put(this.apiurl+'/'+id,data);
   }
 }

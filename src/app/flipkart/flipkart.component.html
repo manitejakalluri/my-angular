@@ -7,6 +7,7 @@
         <h6 style="color: red;">RS{{flipkart.price}}</h6>
         <!-- <h6>{{flipkart.rate}}</h6> -->
         <!-- <h6>{{flipkart.id}}</h6> -->
-         <div class="rating">{{flipkart.rating.rate}}</div>
+         <div class="rating"><app-rating [rating]="flipkart.rating.rate"></app-rating></div>
+          <!-- <h6 class="rate"><app-rating [rating]="flipkart.rating.rate"></app-rating></h6> -->
     </div>
  </div>
