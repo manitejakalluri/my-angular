@@ -19,7 +19,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { ProductsComponent } from './products/products.component';
 import { VehiclesComponent } from './vehicles/vehicles.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { MailComponent } from './mail/mail.component';
 import { PinterestComponent } from './pinterest/pinterest.component';
@@ -44,6 +44,9 @@ import { CardComponent } from './card/card.component';
 import { CodComponent } from './cod/cod.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { CaptialDirective } from './captial.directive';
+import { RupeePipe } from './rupee.pipe';
+import { TokenInterceptor } from './token.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,6 +86,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UpiComponent,
     CardComponent,
     CodComponent,
+    CaptialDirective,
+    RupeePipe,
   ],
   imports: [
     BrowserModule,
@@ -93,7 +98,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutUsModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { User } from '../user';
 
 @Component({
   selector: 'app-parent',
@@ -15,5 +16,11 @@ export class ParentComponent {
 
   catch(value:number){
     this.child=value;
+  }
+
+  userdetails:User={
+    name:'teja',
+    mobile:9989999999,
+    isIndian:true
   }
 }

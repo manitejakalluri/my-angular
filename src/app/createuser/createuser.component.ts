@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { applemail } from '../parent/validators';
 
 @Component({
   selector: 'app-createuser',
@@ -9,13 +10,13 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 export class CreateuserComponent {
 public userform:FormGroup=new FormGroup({
   name:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(10)]),
-  email:new FormControl(),
-  password:new FormControl(),
-  mobile:new FormControl(),
+  email:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(20),applemail]),
+  password:new FormControl('', [Validators.required]),
+  mobile:new FormControl('', [Validators.required]),
   address:new FormGroup({
-    city:new FormControl(),
-    state:new FormControl(),
-    pincode:new FormControl(),
+    city:new FormControl('', [Validators.required]),
+    state:new FormControl('', [Validators.required]),
+    pincode:new FormControl('', [Validators.required]),
   }),
   type:new FormControl(),
   cards:new FormArray([])
@@ -56,4 +57,5 @@ constructor(){
 submit(){
   console.log(this.userform.value);
 }
+message: string = '';
 }

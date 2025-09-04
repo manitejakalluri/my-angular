@@ -1,14 +1,25 @@
 <!-- <p>createuser works!</p> -->
-<form [formGroup]="userform"> 
+<form [formGroup]="userform">
     <label>name:</label>
-    <input type="text" formControlName="name"><br>
+    <input type="text" formControlName="name" appCaptial><br>
     <div *ngIf="userform.get('name')?.touched && userform.get('name')?.invalid">
         <p *ngIf="userform.get('name')?.errors?.['required']">name is required</p>
         <p *ngIf="userform.get('name')?.errors?.['minlength']">name is minimum 6 characters</p>
         <p *ngIf="userform.get('name')?.errors?.['maxlength']">name is maximum 10 characters</p>
+        <p *ngIf="userform.get('name')?.errors?.['maxlength']">name is maximum 20 characters</p>
     </div>
     <label>email:</label>
     <input type="email" formControlName="email"><br>
+    <div *ngIf="userform.get('email')?.touched && userform.get('email')?.invalid">
+        <p *ngIf="userform.get('email')?.errors?.['required']">email is required</p>
+        <p *ngIf="userform.get('email')?.errors?.['required']">email is minimum 6 characters</p>
+        <p *ngIf="userform.get('email')?.errors?.['required']">email is maximum 10 characters</p>
+        <p *ngIf="userform.get('email')?.errors?.['required']">email is maximum 20 characters</p>
+        <p *ngIf="userform.get('email')?.errors?.['applemail']">please use apple mail only</p>
+    </div>
+
+
+
     <label>password:</label>
     <input type="password" formControlName="password"><br>
     <label>mobile number:</label>
@@ -24,10 +35,10 @@
     </div>
 
     <label>type</label>
-        <input type="radio" name="type" formControlName="type" value="dayscholar">
-        <label>day scholar</label>
-        <input type="radio" name="type" formControlName="type" value="residential">
-        <label>residential</label><br>
+    <input type="radio" name="type" formControlName="type" value="dayscholar">
+    <label>day scholar</label>
+    <input type="radio" name="type" formControlName="type" value="residential">
+    <label>residential</label><br>
 
     <div *ngIf="userform.get('type')?.value=='dayscholar'">
         <label>bus fee</label>
@@ -38,7 +49,7 @@
         <label>hostel fee</label>
         <input type="number" formControlName="hostelFee"><br>
     </div>
-    
+
     <h4>cards:</h4>
     <button (click)="addcard()" class="btn btn-primary">addcard</button>
     <div formArrayName="cards">
@@ -54,6 +65,12 @@
                 <button class="btn btn-danger" (click)="delete(i)">delete</button>
             </div>
         </div>
-        <button (click)="submit()" class="btn btn-success">submit</button>
+        <!-- <button (click)="submit()" class="btn btn-success">submit</button> -->
+        <button (click)="submit()" class="btn btn-success" [disabled]="!userform.valid">
+            submit
+        </button>
+
+        <textarea [(ngModel)]="message" minlength="20" maxlength="150"
+            placeholder="Type between 20 and 150 characters"></textarea>
     </div>
 </form>
