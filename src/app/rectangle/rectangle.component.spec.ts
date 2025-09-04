@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RectangleComponent } from './rectangle.component';
+import { FormsModule } from '@angular/forms';
 
 describe('RectangleComponent', () => {
   let component: RectangleComponent;
@@ -8,7 +9,8 @@ describe('RectangleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RectangleComponent ]
+      declarations: [ RectangleComponent ],
+      imports: [FormsModule]
     })
     .compileComponents();
 

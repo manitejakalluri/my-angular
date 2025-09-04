@@ -42,6 +42,8 @@ import { AboutUsModule } from './about-us/about-us.module';
 import { UpiComponent } from './upi/upi.component';
 import { CardComponent } from './card/card.component';
 import { CodComponent } from './cod/cod.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { CaptialDirective } from './captial.directive';
 import { RupeePipe } from './rupee.pipe';
 import { TokenInterceptor } from './token.interceptor';
@@ -94,6 +96,7 @@ import { TokenInterceptor } from './token.interceptor';
     HttpClientModule,
     ReactiveFormsModule,
     AboutUsModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     {
