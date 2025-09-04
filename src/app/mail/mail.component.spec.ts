@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MailComponent } from './mail.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MailService } from '../mail.service';
 
 describe('MailComponent', () => {
   let component: MailComponent;
@@ -8,7 +10,9 @@ describe('MailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MailComponent ]
+      declarations: [ MailComponent ],
+       imports: [HttpClientTestingModule],  // ✅ provide HttpClient mock
+      providers: [MailService]
     })
     .compileComponents();
 

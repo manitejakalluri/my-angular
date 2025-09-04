@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateuserComponent } from './createuser.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('CreateuserComponent', () => {
   let component: CreateuserComponent;
@@ -8,7 +10,11 @@ describe('CreateuserComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateuserComponent ]
+      declarations: [ CreateuserComponent ],
+      imports: [
+        ReactiveFormsModule,     // ✅ enables [formGroup] and formControlName
+        HttpClientTestingModule  // ✅ safe if HttpClient is used
+      ]
     })
     .compileComponents();
 

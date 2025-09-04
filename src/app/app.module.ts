@@ -42,6 +42,7 @@ import { AboutUsModule } from './about-us/about-us.module';
 import { UpiComponent } from './upi/upi.component';
 import { CardComponent } from './card/card.component';
 import { CodComponent } from './cod/cod.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -90,6 +91,7 @@ import { CodComponent } from './cod/cod.component';
     HttpClientModule,
     ReactiveFormsModule,
     AboutUsModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
